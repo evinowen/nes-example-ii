@@ -1,0 +1,28 @@
+SEI
+
+InitializeProgram
+
+VBlankWait
+
+PPULoopVRAM $2000, #$00, #$FF
+PPULoopVRAM $2100, #$00, #$FF
+PPULoopVRAM $2200, #$00, #$FF
+PPULoopVRAM $2300, #$C0, #$FF
+PPULoopVRAM $23C0, #$00, #$00
+
+PPULoopVRAM $2C00, #$00, #$FF
+PPULoopVRAM $2D00, #$00, #$FF
+PPULoopVRAM $2E00, #$00, #$FF
+PPULoopVRAM $2F00, #$C0, #$FF
+PPULoopVRAM $2FC0, #$00, #$00
+
+LDA #%10010000
+STA $2000
+
+LDA #%00011110
+STA $2001
+
+LDA #$00
+STA state
+
+CLI
